@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS requestlogs;
+CREATE TABLE requestlogs(
+	"id" SERIAL PRIMARY KEY, 
+	RequestID VARCHAR(100) NOT NULL, 
+	RequestStatus INTEGER NOT NULL, 
+	RequestType VARCHAR(100) NOT NULL,
+	ResponseTime FLOAT NOT NULL,
+	RequestTime TIMESTAMP NOT NULL, 
+	Payload JSONB, 
+	ContentType VARCHAR(100), 
+	IPAddress VARCHAR(100) NOT NULL, 
+	OS VARCHAR(100) NOT NULL, 
+	UserAgent VARCHAR(100) NOT NULL
+);
